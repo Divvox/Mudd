@@ -1,49 +1,36 @@
 from irc import *
 import random
 
-class Player(object):
-	"""This room bit will probably end up being blank, with it being populated with the default room for a new character and the obj saved with the current room data, all from the
-			DB instead of trying to outline fields here..."""
-	cur_room = {
-			id = 0
-			short_desc = "The player sees this when they enter the room."
-			full_desc = "The player sees this when they use the look command."
-			look_desc = "The player sees this when they look at the room from an adjacent room"
-			north = 0
-			ndoor = False
-			nlock = False
-			south = 0
-			sdoor = False
-			slock = False
-			east = 0
-			edoor = False
-			elock = False
-			west = 0
-			wdoor = False
-			wlock = False
-			up = 0
-			udoor = False
-			ulock = False
-			down = 0
-			ddoor = False
-			dlock = False
-			r_inv = []
-		}
+class Player(object):	
 	def __init__(self, player_name, cur_room, inventory):
 		self.player_name = player_name
-		
-		self.inventory = {}
+		self.cur_room = cur_room
+		self.inventory = inventory
 	
+
 """Sets up room object for use in formatting each room's data, to be stored in a DB.  Need to figure out how to have this equal the room the player is in...
 		Maybe if I store room ID in the player object, I can keep data from overlapping and just directly reference a player's info so multiple people can play"""
 
 
 """Entering loop to allow for all the player commands"""
 def start_game():
+	pName = raw_input("Who are you? (This is case sensitive) ").strip
+	starting_room = 1
+	p = Player(pName, 1, inventory)
+	
+#  Section for game save code, commented out so I can test the game before I figure the damn thing out
+#	try:
+#		with open(player_name + ".txt", 'r') as file:
+#			file.read(PULL DATA INTO IN-GAME OBJECTS FROM PLAYER AND GAME-STATE INFO)
+#	except FileNotFoundError:
+#		with open(player_name + ".txt", 'w') as file:
+#			file.write(SET THE STARTER PLAYER OBJECT W/ STARTING ROOM DATA, FOLLOWED BY THE BLANK GAME-STATE OBJECT)
+		
 	while True:
+		print p.cur_room
 		action = ""
-		action = input("What do you do? ").lower().strip()
-		if action == "go " + *:  """Is this right?  Might throw an error..."""
+		action = input("What do you do? ").lower().rstrip()
+		if action.beginsWith('go'):
 			text = action.split(" ")
 			if text[1] == "north" or text[1] == "south" or text[1] == "east" or text[1] == "west" or text[1] == "up" or text[1] == "down":
 				if player.cur_room[text[1]] == 0:
@@ -56,11 +43,11 @@ def start_game():
 			else:
 				print "I don't understand that direction!"
 				continue
-		elif action == "look " + *:
+		elif action.beginsWith('look'):
 			text = action.split(" ")
 			if text[1] == "north" or text[1] == "south" or text[1] == "east" or text[1] == "west" or text[1] == "up" or text[1] == "down":
 				if player.cur_room[text[1]] == 0:
-					print "You see a wall!  Try looking in a different direction!"
+					print "You see a wall!  Try looking in a different direction."
 					continue
 				elif text[1] == Null:
 					print player.cur_room.full_desc
