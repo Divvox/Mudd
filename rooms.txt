@@ -1,0 +1,11 @@
+ROOM_ID|short_desc|full_desc|look_desc|north|nDoor|nLock|nTrap|south|sDoor|sLock|sTrap|east|eDoor|eLock|eTrap|west|wDoor|wLock|wTrap|up|uDoor|uLock|uTrap|down|dDoor|dLock|dTrap|r_inv
+1|"This is the starting room, it is grey-walled and featureless with a single opening to the north."|"Looking closer, you realize the grey is the most grey that's every greyed.  It boggles your mind.  Color slowly bleeds toward you from down the hallway."|"It looks pretty grey over there."|r2|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|""
+2|""|""|""|r3|True|False|0|r1|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|"An Apple, a gazeebo"
+3|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""
+4|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""
+5|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""
+6|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""
+7|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""
+8|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""
+9|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""
+10|""|""|""|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|0|False|False|0|""

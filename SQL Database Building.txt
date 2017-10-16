@@ -1,0 +1,48 @@
+Outline/code of data format for the db table
+	Need a "changes" class in python that records any changes.  When loading a room, need the process to load the next room's defaults but then overwrite the cur_room details with
+	any saved information from a sub-dictionary listing (only storing changes).  I also need to include a step to save the current room's state prior to leaving it.  All of this
+	should be a method that's called both by saving and by changing rooms.  Maybe look for a more efficent method of saving the game state/storing the state of a room?
+
+
+
+CREATE DATABASE ADVENTURE_DB
+
+CREATE TABLE ROOMS (
+	ROOM_ID INT NOT NULL,
+	short_desc TEXT,
+	full_desc TEXT,
+	look_desc TEXT,
+	north INT,
+	nDoor INT,
+	nLock INT,
+	nTrap INT,
+	south INT,
+	sDoor INT,
+	sLock INT,
+	sTrap INT,
+	east INT,
+	eDoor INT,
+	eLock INT,
+	eTrap INT,
+	west INT,
+	wDoor INT,
+	wLock INT,
+	wTrap INT,
+	up INT,
+	uDoor INT,
+	uLock INT,
+	uTrap INT,
+	down INT,
+	dDoor INT,
+	dLock INT,
+	dTrap INT,
+	r_inv TEXT,
+	Mobs INT, (Got no idea how this'll work, keep working the problem)
+	PRIMARY KEY (ROOM_ID)
+)
+
+CREATE TABLE CONTAINERS (
+	CON_ID INT NOT NULL,
+	
+	
+)
