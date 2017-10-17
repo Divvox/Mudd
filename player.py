@@ -1,7 +1,7 @@
 def createToken(self):
-	token_url = 'https://lhediscoverysandbox.service-now.com/oauth_token.do'
-	client_id = 'ff4cff6dd79dc70025b6f8fe2738b9a1'
-	client_secret = 'VvSHW)(reC'
+	token_url = 'http://address.com'
+	client_id = ''
+	client_secret = ''
 	usr = ''
 	pwd = ''
 	oauth = OAuth2Session(client=LegacyApplicationClient(client_id=client_id))
