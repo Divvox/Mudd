@@ -43,10 +43,10 @@ def crrec(roomid):
 
 def start_game():
     """Entering loop to allow for all the player commands"""
-#    name = input("Who are you? (This is case sensitive) ")
+    # name = input("Who are you? (This is case sensitive) ")
     p = Player('Bob_Test', crrec('0001'), {})
     print("Hello " + str(p.player_name) + "!")
-    print(rfield(p.cur_room[ROOM_ID], 'short_desc')) #it isn't recognizing the field "short_desc" from the p.cur_room, I think because there aren't "" around the string 'short_desc' when it finally makes it into the return statement up in the rfield function.  No idea how to fix this atm...  maybe change function to find key index and request that instead?
+    print(p.cur_room['short_desc'])
     while True:
         action = ""
         print()
