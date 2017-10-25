@@ -1,0 +1,7 @@
+{
+	"general": "Available Help Records: go, enter, look, pick up, open, close, lock, unlock, inventory[inv], ",
+	"go": "Format: 'go [direction]' - moves you in the direction indicated.  You can also use 'enter'.",
+	"enter": "Similar to the 'go' command, use 'help go' for more information.",
+	"look": "Format: 'look [direction or object]' - this action provides additional information regarding a neighboring space, or specific object in the room",
+	"pick up": "temp text"
+}

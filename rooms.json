@@ -2,19 +2,23 @@
 	"rooms": {
 		"0001": {
 			"rid": "0001",
-			"short_desc": "This is the starting room, it is grey-walled and featureless with a single opening to the north.",
-			"full_desc": "Looking closer, you realize the grey is the most grey that has every greyed.  It boggles your mind.  Color slowly bleeds toward you from down the hallway to the north.",
-			"look_desc": "It looks pretty grey over there.",
+			"short_desc": "Wood from the boardwalk creeks loudly under your feet as you shift idlly.  A setting sun sits off of the water to the east, framing the beach and ocean front.  A fishmonger hawks goods to the west in a small building.  The boardwalk stretches to the north, the fishmonger to the west, and the beach to the east.",
+			"full_desc": "The boardwalk looks fairly old, as if it had been there for years, and bits of sand blow lightly across it and between the boards.  Occational passer-bys idle by nearby shops or walk slowly down the boardwalk, taking in the view.  Foam from the surf slowly rolls up the short beach sands in a regular tidal wave.  /n The boardwalk stretches to the north, the fishmonger to the west, and the beach to the east.",
+			"look_desc": "The boardwalk continues this way, ending along with the rest of the world a few hundred feet off.",
 			"exits": {
-				"north": "0002"
+				"north": "0002",
+				"fish shop": "0004",
+				"west": "0004",
+				"door": "0004",
+				"east": ""
 			},
 			"r_inv": []
 		},
 		"0002": {
 			"rid": "0002",
-			"short_desc": "The walls are covered in vibrant pigments that seem to ooze slowly towards a grate in the floor.",
-			"full_desc": "The walls are covered in vibrant pigments that seem to ooze slowly towards a grate in the floor.  There is a door in the north wall, and a hallway south where the color begins to fade.",
-			"look_desc": "The area head seems to be full of an array of colors and patterns.",
+			"short_desc": "The boardwalk continues here, wood boards creaking under your feet.  Sweet smells eminate from an open ice cream shop door to the west, bright pastels covering the storefront. /n The boardwalk continues north and south, a shop lies west, and the beach stretches out east.",
+			"full_desc": "Voices of kids at play and people having idle conversations surround you, the crowds a bit heavier here.  .  Sweet smells eminate from an open ice cream shop door to the west, bright pastels covering the storefront. /n The boardwalk continues north and south, a shop lies west, and the beach stretches out east.",
+			"look_desc": "The boardwalk continues this way.",
 			"exits": {
 				"north": "0003",
 				"south": "0001",
@@ -24,9 +28,9 @@
 		},
 		"0003": {
 			"rid": "0003",
-			"short_desc": "",
-			"full_desc": "",
-			"look_desc": "",
+			"short_desc": "The docks end here, fading into nothingness.  Just on the edge of the end, a lone shoe store is open, a pair of red cowboy boots nailed above the door frame.",
+			"full_desc": "long desc",
+			"look_desc": "The world ends a bit further down the boardwalk.",
 			"exits": {
 				"south": "0002",
 				"east": "0004",
@@ -36,11 +40,12 @@
 		},
 		"0004": {
 			"rid": "0004",
-			"short_desc": "",
-			"full_desc": "",
-			"look_desc": "",
+			"short_desc": "The strong smell of fish and the acrid smell of eviceration permiates the air here.  Large containers are packed with ice and fish around the edges of the room, and a gruff looking merchant is resting up against the back wall, watching you.",
+			"full_desc": "It's a fish shop man, what do you want?  Ask to buy some fish or something.",
+			"look_desc": "The fish shop has dead trout tacked above the door frame, and the brown stains under it suggest it isn't taxidermied.  The smell of fish is pretty strong, even out here.",
 			"exits": {
-				"north": "0002"
+				"west": "0001",
+				"door": "0001"
 			},
 			"r_inv": []
 		},
@@ -60,7 +65,8 @@
 			"full_desc": "",
 			"look_desc": "It's dark down there, except for an occational flash of dim light.",
 			"exits": {
-				"grate": "0002"
+				"grate": "0002",
+				"up": "0002"
 			},
 			"r_inv": []
 		}
