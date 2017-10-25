@@ -1,0 +1,68 @@
+{
+	"rooms": {
+		"0001": {
+			"rid": "0001",
+			"short_desc": "This is the starting room, it is grey-walled and featureless with a single opening to the north.",
+			"full_desc": "Looking closer, you realize the grey is the most grey that has every greyed.  It boggles your mind.  Color slowly bleeds toward you from down the hallway to the north.",
+			"look_desc": "It looks pretty grey over there.",
+			"exits": {
+				"north": "0002"
+			},
+			"r_inv": []
+		},
+		"0002": {
+			"rid": "0002",
+			"short_desc": "The walls are covered in vibrant pigments that seem to ooze slowly towards a grate in the floor.",
+			"full_desc": "The walls are covered in vibrant pigments that seem to ooze slowly towards a grate in the floor.  There is a door in the north wall, and a hallway south where the color begins to fade.",
+			"look_desc": "The area head seems to be full of an array of colors and patterns.",
+			"exits": {
+				"north": "0003",
+				"south": "0001",
+				"grate": "0006"
+			},
+			"r_inv": []
+		},
+		"0003": {
+			"rid": "0003",
+			"short_desc": "",
+			"full_desc": "",
+			"look_desc": "",
+			"exits": {
+				"south": "0002",
+				"east": "0004",
+				"west": "0005"
+			},
+			"r_inv": []
+		},
+		"0004": {
+			"rid": "0004",
+			"short_desc": "",
+			"full_desc": "",
+			"look_desc": "",
+			"exits": {
+				"north": "0002"
+			},
+			"r_inv": []
+		},
+		"0005": {
+			"rid": "0005",
+			"short_desc": "",
+			"full_desc": "",
+			"look_desc": "",
+			"exits": {
+				"north": "0002"
+			},
+			"r_inv": []
+		},
+		"0006": {
+			"rid": "0006",
+			"short_desc": "The colors from above mingle here, creating shifting patterns of light before they meld together into the brown ooze you now stand in.  The grate above you appears to be the only way in or out.",
+			"full_desc": "",
+			"look_desc": "It's dark down there, except for an occational flash of dim light.",
+			"exits": {
+				"grate": "0002"
+			},
+			"r_inv": []
+		}
+	}
+}

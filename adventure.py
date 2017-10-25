@@ -1,5 +1,24 @@
 from irc import *
 import random
+import csv
+
+roomfile = open('rooms.csv', "r")
+roomreader = csv.reader(roomfile, delimiter='|')
+
+# Takes a room ID and column name from the rooms.csv file and returns the requested field!
+def rfield(roomid, column_name):
+	rownum = 0
+	for row in roomreader:
+		if rownum == 0:
+			header = row
+		else:
+			if row[0] == roomid:
+				desrow = dict(zip(header, row))
+				return desrow[column_name]
+		rownum += 1
+
+
+
 
 class Player(object):	
 	def __init__(self, player_name, cur_room, inventory):
@@ -14,10 +33,9 @@ class Player(object):
 
 """Entering loop to allow for all the player commands"""
 def start_game():
-	pName = raw_input("Who are you? (This is case sensitive) ").strip
-	starting_room = 1
-	p = Player(pName, 1, inventory)
-	
+	pName = input("Who are you? (This is case sensitive) ").strip
+	p = Player(pName, '0001',{})
+	print("Hello " + p.player_name + "!")
 #  Section for game save code, commented out so I can test the game before I figure the damn thing out
 #	try:
 #		with open(player_name + ".txt", 'r') as file:
@@ -25,43 +43,43 @@ def start_game():
 #	except FileNotFoundError:
 #		with open(player_name + ".txt", 'w') as file:
 #			file.write(SET THE STARTER PLAYER OBJECT W/ STARTING ROOM DATA, FOLLOWED BY THE BLANK GAME-STATE OBJECT)
-		
 	while True:
-		print p.cur_room
+		print(rfield(p.cur_room, short_desc))
 		action = ""
+		print()
 		action = input("What do you do? ").lower().rstrip()
-		if action.beginsWith('go'):
+		if action.startswith('go'):
 			text = action.split(" ")
 			if text[1] == "north" or text[1] == "south" or text[1] == "east" or text[1] == "west" or text[1] == "up" or text[1] == "down":
 				if player.cur_room[text[1]] == 0:
-					print "Ouch!  That's a wall!"
+					print("Ouch!  That's a wall!")
 					continue
 				else: 
 					"""Call and set the room dictionary to match the ID listed in the appropriate direction field"""
-					print player.cur_room[short_desc]
+					print(player.cur_room[short_desc])
 					continue
 			else:
-				print "I don't understand that direction!"
+				print("I don't understand that direction!")
 				continue
-		elif action.beginsWith('look'):
+		elif action.startswith('look'):
 			text = action.split(" ")
 			if text[1] == "north" or text[1] == "south" or text[1] == "east" or text[1] == "west" or text[1] == "up" or text[1] == "down":
 				if player.cur_room[text[1]] == 0:
-					print "You see a wall!  Try looking in a different direction."
+					print("You see a wall!  Try looking in a different direction.")
 					continue
 				elif text[1] == Null:
-					print player.cur_room.full_desc
+					print(player.cur_room.full_desc)
 				else: 
-					print c.execute(SELECT look_desc FROM RoomTable WHERE ID = player.cur_room[text[1]]) """I think it works something like this, but still need to import 
+					#print(c.execute(SELECT look_desc FROM RoomTable WHERE ID = player.cur_room[text[1]])) """I think it works something like this, but still need to import
 							SQLite and dec what DB c is calling to...  Can I put python variables into SQL queries like this?"""
 					continue
 			else:
-				print "I don't understand that direction!"
+				print("I don't understand that direction!")
 				continue
 		elif action == "quit" or action == "exit"
 			"""Do some kind of game save function, hell if i know atm.  It's looking like I can just save the player class record, and the user can enter their player name to 
 					continue the game (or it references their IRC account)"""
-			print "Game saved, later tater!"
+			print("Game saved, later tater!")
 			break
 		elif action == "get " + *:
 			
