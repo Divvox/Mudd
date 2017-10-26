@@ -12,17 +12,27 @@
 				"door": "0004",
 				"east": ""
 			},
+			"exitdesc": {
+			    "north": "The boardwalk continues north.",
+				"west": "A fish shop is open to the west.",
+				"east": "The beach is accessable to the east."
+			},
 			"r_inv": []
 		},
 		"0002": {
 			"rid": "0002",
-			"short_desc": "The boardwalk continues here, wood boards creaking under your feet.  Sweet smells eminate from an open ice cream shop door to the west, bright pastels covering the storefront. /n The boardwalk continues north and south, a shop lies west, and the beach stretches out east.",
-			"full_desc": "Voices of kids at play and people having idle conversations surround you, the crowds a bit heavier here.  .  Sweet smells eminate from an open ice cream shop door to the west, bright pastels covering the storefront. /n The boardwalk continues north and south, a shop lies west, and the beach stretches out east.",
+			"short_desc": "The boardwalk continues here, wood boards creaking under your feet.  Sweet smells eminate from an open ice cream shop door to the west, bright pastels covering the storefront.  The boardwalk continues north and south, a shop lies west, and the beach stretches out east.",
+			"full_desc": "Voices of kids at play and people having idle conversations surround you, the crowds a bit heavier here.  Sweet smells eminate from an open ice cream shop door to the west, bright pastels covering the storefront.  The boardwalk continues north and south, a shop lies west, and the beach stretches out east.",
 			"look_desc": "The boardwalk continues this way.",
 			"exits": {
 				"north": "0003",
 				"south": "0001",
 				"grate": "0006"
+			},
+			"exitdesc": {
+			    "north": "The boardwalk continues north.",
+				"south": "The boardwalk continues south.",
+			    "grate": "There is a grate on the ground here."
 			},
 			"r_inv": []
 		},
@@ -36,6 +46,11 @@
 				"east": "0004",
 				"west": "0005"
 			},
+			"exitdesc": {
+			    "south": "The boardwalk continues to the south",
+				"east": "The beach extends out from the boardwalk to the east.",
+				"west": "A shoe shop is open to the west."
+			},
 			"r_inv": []
 		},
 		"0004": {
@@ -44,18 +59,25 @@
 			"full_desc": "It's a fish shop man, what do you want?  Ask to buy some fish or something.",
 			"look_desc": "The fish shop has dead trout tacked above the door frame, and the brown stains under it suggest it isn't taxidermied.  The smell of fish is pretty strong, even out here.",
 			"exits": {
-				"west": "0001",
+				"east": "0001",
 				"door": "0001"
+			},
+			"exitdesc": {
+			    "east": "The boardwalk is outside, to the east."
 			},
 			"r_inv": []
 		},
 		"0005": {
 			"rid": "0005",
-			"short_desc": "",
-			"full_desc": "",
-			"look_desc": "",
+			"short_desc": "A Shoe Shop!",
+			"full_desc": "A long description for a shoe shop.",
+			"look_desc": "Looks like a shoe shop!",
 			"exits": {
-				"north": "0002"
+				"east": "0003",
+				"door": "0003"
+			},
+			"exitdesc": {
+			    "north": "The shop exits back onto the boardwalk to the east."
 			},
 			"r_inv": []
 		},
@@ -67,6 +89,9 @@
 			"exits": {
 				"grate": "0002",
 				"up": "0002"
+			},
+			"exitdesc": {
+			    "grate": "You can get out of the storm drain by climbing up."
 			},
 			"r_inv": []
 		}

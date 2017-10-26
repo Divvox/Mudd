@@ -1,4 +1,10 @@
 {
+    "moveerrors": {
+	    "1": "Ow! How did I miss that wall?",
+		"2": "There isn't any way forward in that direction.",
+		"3": "I can't phase through matter, maybe another direction.",
+		"4": "Not gunna happen, bub."
+	},
 	"help": {
 	    "go": "'go' - (go [direction]) - moves you in the direction indicated.  You can also use 'enter'.",
 	    "enter": "'enter' - (enter [direction]) - similar to the 'go' command, use 'help go' for more information.",
@@ -7,5 +13,11 @@
 	    "open": "'open' - (open [door, container]) - opens a door or door-like object or container.",
 	    "close": "'close' - (close [door, container]) - closes a door or door-like object or container.",
 	    "exits": "'exits' - provides a list of available directions to use the go command with.  Others usable terms may be available, but only one term per exit is listed."
+	},
+	"geterrors": {
+	    "1": "I don't see that anywhere.",
+		"2": "Get what now?",
+		"3": "If you see it, you must be hallucinating."
 	}
+	
 }
