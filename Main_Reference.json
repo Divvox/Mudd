@@ -1,7 +1,7 @@
 {
     "moveerrors": {
 	    "1": "Ow! How did I miss that wall?",
-		"2": "There isn't any way forward in that direction.",
+		"2": "There isn't any way to go in that direction.",
 		"3": "I can't phase through matter, maybe another direction.",
 		"4": "Not gunna happen, bub."
 	},
@@ -9,7 +9,7 @@
 	    "go": "'go' - (go [direction]) - moves you in the direction indicated.  You can also use 'enter'.",
 	    "enter": "'enter' - (enter [direction]) - similar to the 'go' command, use 'help go' for more information.",
 	    "look": "'look' - (look [direction or object]) - this action provides additional information regarding a neighboring space, or specific object in the room",
-	    "get": "'get' - (get [object] OR get [container] [object]) - picks up an object from the world or a container and puts it in your inventory.",
+	    "get": "'get' - (get [object] OR get [object] from [container]) - picks up an object from the world or a container and puts it in your inventory.",
 	    "open": "'open' - (open [door, container]) - opens a door or door-like object or container.",
 	    "close": "'close' - (close [door, container]) - closes a door or door-like object or container.",
 	    "exits": "'exits' - provides a list of available directions to use the go command with.  Others usable terms may be available, but only one term per exit is listed."
@@ -18,6 +18,15 @@
 	    "1": "I don't see that anywhere.",
 		"2": "Get what now?",
 		"3": "If you see it, you must be hallucinating."
-	}
-	
+	},
+	"lookerrors": {
+	    "1": "Nope, nothing there.",
+		"2": "Maybe if I look somewhere else...",
+		"3": "Hmmmmmm..."
+	},
+	"doors": {
+		"0001,0004": "closed",
+		"0003,0005": "open",
+		"0002,0006": "closed"
+	}		
 }
